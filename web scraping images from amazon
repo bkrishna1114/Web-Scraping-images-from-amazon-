@@ -1,0 +1,12 @@
+### web scraping website using url.......
+
+​
+url_2 = 'https://www.amazon.in/s?k=mobiles&ref=nb_sb_noss_1'
+Data=  requests.get(url).text
+soup=BeautifulSoup(Data,'html5lib')
+soup.h
+imagelist=[]
+for image in soup.find_all('img'):
+    imagelist.append(image)
+    
+import os
